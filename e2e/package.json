@@ -1,0 +1,13 @@
+{
+  "name": "e2e",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "swc --quiet -d dist src && node dist/src/main.js"
+  },
+  "devDependencies": {
+    "@swc/cli": "0.3.12",
+    "@swc/core": "1.4.13",
+    "@quramy/swc-first-plugin": "file:../"
+  }
+}

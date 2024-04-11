@@ -21,3 +21,16 @@ jobs:
       - name: Test
         run: |
           cargo test
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: npm
+
+      - run: npm run build
+
+      - name: e2e
+        working-directory: subdir
+        run: |
+          npm ci
+          npm test
