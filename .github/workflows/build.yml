@@ -23,6 +23,7 @@ jobs:
           cargo test
 
       - uses: actions/setup-node@v4
+        working-directory: e2e
         with:
           node-version: 18.x
           cache: npm
@@ -30,7 +31,7 @@ jobs:
       - run: npm run build
 
       - name: e2e
-        working-directory: subdir
+        working-directory: e2e
         run: |
           npm ci
           npm test
