@@ -1,5 +1,5 @@
 {
-  "name": "swc-first-plugin",
+  "name": "@quramy/swc-first-plugin",
   "version": "0.1.0",
   "description": "",
   "author": "Quramy",
@@ -7,7 +7,8 @@
   "keywords": ["swc-plugin"],
   "main": "target/wasm32-wasi/release/swc_first_plugin.wasm",
   "scripts": {
-    "prepublishOnly": "cargo build-wasi --release"
+    "build": "cargo build-wasi --release",
+    "prepublishOnly": "npm run build"
   },
   "files": [],
   "preferUnplugged": true
