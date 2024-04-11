@@ -23,7 +23,6 @@ jobs:
           cargo test
 
       - uses: actions/setup-node@v4
-        working-directory: e2e
         with:
           node-version: 18.x
           cache: npm
